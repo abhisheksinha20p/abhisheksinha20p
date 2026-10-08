@@ -37,17 +37,14 @@ Right now I'm building [mycodeyatra.com](https://mycodeyatra.com), a multi-autho
 
 ### Projects
 
-**Restaurant Management SaaS** — Multi-tenant platform for restaurant operations, with real-time order tracking over Socket.IO, an event-driven microservices architecture, and an API gateway with rate limiting.
-`React Native` · `Node.js` · `Kafka` · `Redis` · `Docker` · `AWS`
+**[Orbit](https://github.com/abhisheksinha20p/Orbit)** — A streamlined project-tracking system that helps teams and individuals monitor tasks, manage deadlines, and visualize progress in real time.
+`JavaScript`
 
-**School Operations SaaS** — School management platform for multiple user roles, with real-time transport tracking, automated attendance pipelines, and RBAC-secured access control.
-`React Native` · `Node.js` · `Kafka` · `MongoDB` · `Docker`
+**[ClientFlow](https://github.com/abhisheksinha20p/ClientFlow)** — Full-stack client management platform with Stripe payments, JWT authentication, and role-based dashboards.
+`TypeScript`
 
-**ClientFlow** — Full-stack client management platform with Stripe payments, JWT authentication, and role-based dashboards.
-`React` · `Node.js` · `Stripe` · `Docker` · `AWS`
-
-**Vera** — Task management app focused on a smooth, responsive experience.
-`React` · `TypeScript` · `Express` · `MongoDB`
+**[Vera](https://github.com/abhisheksinha20p/Vera)** — Task management app focused on a smooth, responsive experience.
+`TypeScript`
 
 ---
 
