@@ -1,6 +1,11 @@
 <!-- ============================= HERO ============================= -->
 <div align="center">
 
+<!-- Dot-matrix hologram portrait. Regenerate: python scripts/dot_portrait.py --photo assets/me.webp -->
+<img src="./assets/portrait.svg" width="300" alt="Dot-matrix hologram portrait of Abhishek Sinha" />
+
+<br />
+
 <img src="./assets/hero.svg" width="100%" alt="Abhishek Sinha — Web & Mobile App Developer" />
 
 <br />
@@ -48,7 +53,7 @@ I own products end-to-end — from architecture and backend engineering to deplo
 
 ## `~/` toolbox
 
-<img src="https://skillicons.dev/icons?i=js,ts,python,react,nextjs,tailwind,nodejs,express,kafka,mongodb,postgres,redis,aws,docker,nginx,githubactions,prometheus,grafana,git,github&perline=10" alt="tech stack" />
+<img src="https://skillicons.dev/icons?i=js,ts,python,html,css,react,nextjs,tailwind,vite,nodejs,express,kafka,mongodb,postgres,redis,aws,docker,nginx,githubactions,prometheus,grafana,git,github&perline=12" alt="tech stack" />
 
 <br /><br />
 
