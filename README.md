@@ -1,24 +1,20 @@
 <div align="center">
 
+<!-- Pixel hologram. Regenerate from your photo:  python scripts/hologram.py --photo assets/me.jpg -->
+<img src="./assets/hologram.svg" alt="Pixel hologram avatar" width="288" />
+
 <a href="https://github.com/abhisheksinha20p">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2800&pause=900&color=39D353&center=true&vCenter=true&width=700&lines=Abhishek+Sinha;Full+Stack+%26+Mobile+Developer;Scalable+SaaS+%26+Real-Time+Systems;01100011+01101111+01100100+01100101" alt="typing banner" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2800&pause=900&color=2DD4BF&center=true&vCenter=true&width=620&lines=Abhishek+Sinha;Full+Stack+%26+Mobile+Developer;React+Native+%C2%B7+React+%C2%B7+Node.js;Scalable+SaaS+%26+Real-Time+Systems" alt="Abhishek Sinha, Full Stack and Mobile Developer" />
 </a>
 
-<br><br>
+<br />
 
-<a href="https://www.linkedin.com/in/abhishek-sinha-0897aa23b"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="https://abhisheksinha.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=netlify&logoColor=white" alt="Portfolio" /></a>
-<a href="mailto:abhisheksinha20009k@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-<a href="https://mycodeyatra.com"><img src="https://img.shields.io/badge/mycodeyatra.com-39D353?style=for-the-badge&logo=vercel&logoColor=black" alt="mycodeyatra.com" /></a>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-sinha-0897aa23b)
+[![Portfolio](https://img.shields.io/badge/Portfolio-161B22?style=for-the-badge&logo=netlify&logoColor=2DD4BF)](https://abhisheksinha.netlify.app/)
+[![Email](https://img.shields.io/badge/Email-161B22?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abhisheksinha20009k@gmail.com)
 
-<br><br>
-
-<img src="https://img.shields.io/github/followers/abhisheksinha20p?style=flat-square&logo=github&label=Followers&color=39D353" alt="followers" />
-<img src="https://komarev.com/ghpvc/?username=abhisheksinha20p&style=flat-square&color=39d353&label=Profile+views" alt="profile views" />
-
-<br><br>
-
-<img src="./assets/space-shooter.gif" alt="GitHub contribution space shooter" width="80%" />
+<img src="https://img.shields.io/github/followers/abhisheksinha20p?style=flat-square&logo=github&label=followers&labelColor=161B22&color=2DD4BF" alt="followers" />
+<img src="https://komarev.com/ghpvc/?username=abhisheksinha20p&style=flat-square&color=2dd4bf&labelColor=161b22&label=profile+views" alt="profile views" />
 
 </div>
 
@@ -26,12 +22,18 @@
 
 ## `~/` whoami
 
-I'm a **Full Stack & Mobile Developer** with professional experience building **production-grade SaaS platforms**, **real-time systems** and **scalable backend architectures**. I like owning a product end to end: architecture, backend, deployment and production monitoring.
+```ts
+const abhishek = {
+  role: "Full Stack & Mobile Developer",
+  mobile: ["React Native", "iOS", "Android"],
+  web: ["React", "TypeScript", "Node.js"],
+  building: "mycodeyatra.com", // multi-author blogging platform on Vercel + MongoDB Atlas
+  specialties: ["microservices", "DevOps pipelines", "real-time backends"],
+  openTo: ["open source", "system design challenges", "full-time roles"],
+};
+```
 
-- 🌱 **Currently building:** a multi-author blogging platform at **[mycodeyatra.com](https://mycodeyatra.com)**, deployed on **Vercel** and **MongoDB Atlas**
-- ⚙️ **Specialties:** microservices, DevOps pipelines and high-performance real-time backends
-- 🤝 **Open to:** open-source collaboration, system design challenges and full-time engineering roles
-- 🌐 **Portfolio:** **[abhisheksinha.netlify.app](https://abhisheksinha.netlify.app/)**
+I own products end-to-end: React Native and web front ends, Node.js microservices, deployment and production monitoring.
 
 ---
 
@@ -39,23 +41,33 @@ I'm a **Full Stack & Mobile Developer** with professional experience building **
 
 ## `~/` toolbox
 
+<img src="https://skillicons.dev/icons?i=js,ts,python,html,css,react,tailwind,vite,nodejs,express,kafka,mongodb,postgres,redis,aws,docker,nginx,githubactions,prometheus,grafana,git,github,vscode&perline=12" alt="tech stack" />
+
+<br /><br />
+
 <table>
-<tr><td align="right"><b>Languages</b></td><td align="left">
-<img src="https://skillicons.dev/icons?i=js,ts,python,html,css" alt="languages" />
-</td></tr>
-<tr><td align="right"><b>Frontend</b></td><td align="left">
-<img src="https://skillicons.dev/icons?i=react,tailwind,vite,framer" alt="frontend" />
-</td></tr>
-<tr><td align="right"><b>Backend</b></td><td align="left">
-<img src="https://skillicons.dev/icons?i=nodejs,express,kafka" alt="backend" />
-<img src="https://img.shields.io/badge/Socket.io-black?style=flat-square&logo=socket.io" alt="Socket.io" />
-</td></tr>
-<tr><td align="right"><b>Data &amp; Cloud</b></td><td align="left">
-<img src="https://skillicons.dev/icons?i=mongodb,postgres,redis,aws,docker,nginx" alt="data and cloud" />
-</td></tr>
-<tr><td align="right"><b>DevOps &amp; Tools</b></td><td align="left">
-<img src="https://skillicons.dev/icons?i=githubactions,prometheus,grafana,git,github,vscode" alt="devops and tools" />
-</td></tr>
+<tr>
+<td width="50%" align="center" valign="middle">
+
+<!-- Self-rated: edit assets/skills.json, the workflow redraws it -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
+  <img src="assets/radar-dark.svg" width="400" alt="Skill radar chart" />
+</picture>
+
+</td>
+<td width="50%" align="center" valign="middle">
+
+<!-- Built from real language byte counts across your repos -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
+  <img src="assets/radar-langs-dark.svg" width="400" alt="Language radar chart" />
+</picture>
+
+</td>
+</tr>
 </table>
 
 </div>
@@ -64,9 +76,27 @@ I'm a **Full Stack & Mobile Developer** with professional experience building **
 
 <div align="center">
 
-## `~/` the numbers
+## `~/` activity
 
-<img src="https://streak-stats.demolab.com/?user=abhisheksinha20p&theme=transparent&hide_border=true&title_color=39D353&text_color=ffffff&ring=39D353&fire=39D353&currStreakLabel=39D353" alt="GitHub streak" />
+<!-- Generated from your real contribution calendar by scripts/activity.py -->
+<img src="./assets/activity-wave.svg" alt="Animated activity wave" width="100%" />
+
+<br /><br />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
+  <img src="assets/card-stats-dark.svg" width="480" alt="GitHub statistics" />
+</picture>
+
+<br /><br />
+
+<!-- Snake eats the contribution graph: .github/workflows/snake.yml -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abhisheksinha20p/abhisheksinha20p/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abhisheksinha20p/abhisheksinha20p/output/snake.svg">
+  <img src="https://raw.githubusercontent.com/abhisheksinha20p/abhisheksinha20p/output/snake.svg" width="100%" alt="Snake eating the contribution graph" />
+</picture>
 
 </div>
 
@@ -74,19 +104,14 @@ I'm a **Full Stack & Mobile Developer** with professional experience building **
 
 ## `~/` experience
 
-### Full Stack & Mobile Developer (Freelance)
-**Tech Signific** · *Oct 2025 – Present*
+**Full Stack & Mobile Developer (Freelance)** · Tech Signific · *Oct 2025 – Present*
+- Architected multi-tenant SaaS platforms with React Native mobile apps and React admin dashboards.
+- Designed Node.js microservices with Kafka event-driven communication, Redis caching, Socket.IO and an NGINX API gateway.
+- Set up DevOps with Docker, GitHub Actions, AWS EC2, Prometheus and Grafana.
 
-- Architected large-scale multi-tenant SaaS platforms, including React Native mobile apps and React admin dashboards
-- Designed Node.js microservices with Kafka-based event-driven communication
-- Implemented Redis caching, Socket.IO real-time systems and an NGINX API gateway
-- Set up DevOps workflows with Docker, GitHub Actions, AWS EC2, Prometheus and Grafana
-
-### Full Stack Developer Intern
-**Tech Signific** · *Jan 2025 – Jul 2025*
-
-- Built scalable REST APIs with Node.js and Express, plus responsive React interfaces
-- Improved backend performance and production reliability through Agile sprints using Git and Jira
+**Full Stack Developer Intern** · Tech Signific · *Jan 2025 – Jul 2025*
+- Built REST APIs with Node.js and Express and responsive React interfaces.
+- Improved backend performance and reliability in Agile sprints using Git and Jira.
 
 ---
 
@@ -94,61 +119,56 @@ I'm a **Full Stack & Mobile Developer** with professional experience building **
 
 ## `~/` selected work
 
-</div>
-
+<!-- Cards come from assets/projects.json via scripts/cards.py -->
 <table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🍽 Restaurant Management SaaS</h3>
-      <p>Multi-tenant platform for restaurant operations.</p>
-      <p><code>React Native</code> <code>Node.js</code> <code>Kafka</code> <code>Redis</code> <code>Docker</code> <code>AWS</code></p>
-      <ul>
-        <li>Real-time order tracking with Socket.IO</li>
-        <li>Event-driven microservices architecture</li>
-        <li>API gateway with rate limiting</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🏫 School Operations SaaS</h3>
-      <p>School management platform supporting multiple user roles.</p>
-      <p><code>React Native</code> <code>Node.js</code> <code>Kafka</code> <code>MongoDB</code> <code>Docker</code></p>
-      <ul>
-        <li>Real-time transport tracking</li>
-        <li>Automated attendance pipelines</li>
-        <li>RBAC-secured access control</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>💼 ClientFlow</h3>
-      <p>Full-stack client management platform with secure workflows.</p>
-      <p><code>React</code> <code>Node.js</code> <code>Stripe</code> <code>Docker</code> <code>AWS</code></p>
-      <ul>
-        <li>Stripe payment integration</li>
-        <li>JWT authentication and role-based dashboards</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <h3>✨ Vera</h3>
-      <p>Task management app focused on smooth UX.</p>
-      <p><code>React</code> <code>TypeScript</code> <code>Express</code> <code>MongoDB</code></p>
-      <ul>
-        <li>Glassmorphism design</li>
-        <li>Optimized frontend performance</li>
-      </ul>
-    </td>
-  </tr>
+<tr>
+<td width="50%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-restaurant-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/card-restaurant-light.svg">
+    <img src="assets/card-restaurant-dark.svg" width="420" alt="Restaurant Management SaaS" />
+  </picture>
+</td>
+<td width="50%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-school-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/card-school-light.svg">
+    <img src="assets/card-school-dark.svg" width="420" alt="School Operations SaaS" />
+  </picture>
+</td>
+</tr>
+<tr>
+<td width="50%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-clientflow-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/card-clientflow-light.svg">
+    <img src="assets/card-clientflow-dark.svg" width="420" alt="ClientFlow" />
+  </picture>
+</td>
+<td width="50%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-vera-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/card-vera-light.svg">
+    <img src="assets/card-vera-dark.svg" width="420" alt="Vera" />
+  </picture>
+</td>
+</tr>
 </table>
+
+</div>
 
 ---
 
 <div align="center">
 
-If you like my work, feel free to ⭐ my repositories and connect with me.
+## `~/` let's connect
 
-<sub>`01110011 01100101 01100101 00100000 01111001 01101111 01110101 00100000 01101001 01101110 00100000 01110100 01101000 01100101 00100000 01101110 01100101 01111000 01110100 00100000 01100011 01101111 01101101 01101101 01101001 01110100`</sub>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-sinha-0897aa23b)
+[![Portfolio](https://img.shields.io/badge/Portfolio-161B22?style=for-the-badge&logo=netlify&logoColor=2DD4BF)](https://abhisheksinha.netlify.app/)
+[![Email](https://img.shields.io/badge/Email-161B22?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abhisheksinha20009k@gmail.com)
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1F6F3A,100:39D353&height=120&section=footer" alt="" />
+If you like my work or find my projects useful, star a repository and say hello.
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2DD4BF,100:8B7CF6&height=110&section=footer" alt="" />
 
 </div>
