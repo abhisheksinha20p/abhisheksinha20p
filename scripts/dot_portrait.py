@@ -1,53 +1,46 @@
 #!/usr/bin/env python3
 """Retro black & white holographic DOT portrait -> assets/portrait.svg
 
-Renders a photo as a halftone grid of circular dots (dot radius scales with
-brightness), monochrome, on a dark field, with CSS scanline + flicker + a
-sweeping light band so it reads as a retro hologram. Animations run inside
-an <img> on GitHub.
+Renders a photo as a fine halftone grid of circular dots (dot radius scales
+with brightness), monochrome, on a solid black (or transparent) field, with a
+subtle scanline sweep + hologram flicker. Animations run inside an <img> on
+GitHub.
 
-    python scripts/dot_portrait.py --photo assets/me.jpg
-    python scripts/dot_portrait.py --photo assets/me.jpg --preview preview.png
-
-Needs Pillow. Falls back to a silhouette if no photo is given.
+    python scripts/dot_portrait.py --photo assets/me.webp
+    python scripts/dot_portrait.py --photo assets/me.webp --preview preview.png
+    python scripts/dot_portrait.py --photo assets/me.webp --transparent
 """
 import argparse
 import math
 
-# grid + geometry
-COLS = ROWS = 56
-CELL = 6                     # px per cell in the SVG
-PAD = 30                     # frame padding
+# fine grid + geometry
+COLS = ROWS = 104
+CELL = 3                      # px per cell -> small, fine dots
+PAD = 14
 GW, GH = COLS * CELL, ROWS * CELL
 W, H = GW + PAD * 2, GH + PAD * 2
 
-BG = "#070a0f"
-DOT = "#E8F0FA"              # cool white, essentially B&W
-GRID_INK = "#2b3a4a"
-
-
-def _smoothstep(e0, e1, x):
-    t = max(0.0, min(1.0, (x - e0) / (e1 - e0)))
-    return t * t * (3 - 2 * t)
+DOT = "#EAF2FA"              # cool near-white (essentially B&W)
 
 
 def values_from_photo(path):
-    from PIL import Image, ImageOps, ImageEnhance
-    M = COLS * 2                                   # work at 2x for a clean mask
+    from PIL import Image, ImageOps, ImageEnhance, ImageFilter
+    M = COLS * 2                                   # mask resolution
     im = Image.open(path).convert("L")
     im = ImageOps.fit(im, (M, M), method=Image.LANCZOS)
+    im = im.filter(ImageFilter.UnsharpMask(radius=2, percent=120, threshold=2))
     px = im.load()
 
-    # estimate background level from the four corners
+    # background level from the four corners
     corners = []
-    for (ox, oy) in [(0, 0), (M - 6, 0), (0, M - 6), (M - 6, M - 6)]:
-        for dy in range(6):
-            for dx in range(6):
+    for (ox, oy) in [(0, 0), (M - 8, 0), (0, M - 8), (M - 8, M - 8)]:
+        for dy in range(8):
+            for dx in range(8):
                 corners.append(px[ox + dx, oy + dy])
     bg = sum(corners) / len(corners)
-    thr = bg - 32                                  # "bright like background"
+    thr = bg - 30
 
-    # flood-fill the bright background inward from every border pixel
+    # flood-fill the bright background inward from the border
     is_bg = [[False] * M for _ in range(M)]
     stack = []
     for i in range(M):
@@ -62,7 +55,7 @@ def values_from_photo(path):
                 is_bg[ny][nx] = True
                 stack.append((nx, ny))
 
-    # downsample 2x blocks -> grid cell value, dropping background
+    # downsample 2x blocks -> grid value, dropping background
     raw = {}
     lo, hi = 1.0, 0.0
     for r in range(ROWS):
@@ -74,18 +67,18 @@ def values_from_photo(path):
                     if not is_bg[y][x]:
                         tot += px[x, y]
                         fg += 1
-            if fg >= 2:                            # cell is mostly foreground
+            if fg >= 2:
                 v = (tot / fg) / 255.0
                 raw[(c, r)] = v
                 lo, hi = min(lo, v), max(hi, v)
 
-    # stretch foreground tones + gentle gamma so the face reads
+    # stretch foreground tones; no floor so dark areas thin out cleanly
     vals = {}
     rng = max(1e-3, hi - lo)
     for k, v in raw.items():
-        n = (v - lo) / rng
-        n = n ** 0.85
-        vals[k] = 0.12 + 0.88 * n
+        n = ((v - lo) / rng) ** 0.82
+        if n > 0.10:
+            vals[k] = n
     return vals
 
 
@@ -94,97 +87,76 @@ def values_silhouette():
     for r in range(ROWS):
         for c in range(COLS):
             x, y = c + .5, r + .5
-            head = ((x - 28) / 13) ** 2 + ((y - 20) / 16) ** 2 <= 1
-            body = y >= 40 and ((x - 28) / 27) ** 2 + ((y - 66) / 28) ** 2 <= 1
+            head = ((x - 52) / 24) ** 2 + ((y - 38) / 30) ** 2 <= 1
+            body = y >= 74 and ((x - 52) / 50) ** 2 + ((y - 124) / 52) ** 2 <= 1
             if head or body:
                 vals[(c, r)] = 0.85
     return vals
 
 
-def build(vals):
-    maxr = CELL * 0.52
+def build(vals, transparent=False):
+    maxr = CELL * 0.56
     dots = []
     for (c, r), v in vals.items():
-        rad = round(maxr * (0.35 + 0.65 * v), 2)      # brighter -> bigger dot
-        op = round(0.45 + 0.55 * v, 2)
+        rad = round(maxr * (0.28 + 0.72 * v), 2)
+        op = round(0.30 + 0.70 * v, 2)
         cxp = PAD + c * CELL + CELL / 2
         cyp = PAD + r * CELL + CELL / 2
         dots.append(f'<circle cx="{cxp}" cy="{cyp}" r="{rad}" opacity="{op}"/>')
 
-    s = []
-    s.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
-             f'viewBox="0 0 {W} {H}" role="img" aria-label="Dot-matrix hologram portrait of Abhishek Sinha">')
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+         f'viewBox="0 0 {W} {H}" role="img" aria-label="Dot-matrix hologram portrait of Abhishek Sinha">']
     s.append(
         '<style>'
         '.holo{animation:flick 7s linear infinite}'
-        '@keyframes flick{0%,93%,100%{opacity:1}94%{opacity:.78}96%{opacity:.9}97%{opacity:.72}}'
-        '.scan{animation:sweep 4.2s linear infinite}'
-        f'@keyframes sweep{{from{{transform:translateY(-30px)}}to{{transform:translateY({GH + 30}px)}}}}'
-        '.shim{animation:shim 5s ease-in-out infinite}'
-        '@keyframes shim{0%,100%{opacity:.0}50%{opacity:.5}}'
+        '@keyframes flick{0%,92%,100%{opacity:1}93%{opacity:.8}95%{opacity:.92}96%{opacity:.74}}'
+        '.scan{animation:sweep 4.6s linear infinite}'
+        f'@keyframes sweep{{from{{transform:translateY(-24px)}}to{{transform:translateY({GH + 24}px)}}}}'
         '</style>')
     s.append(
         '<defs>'
         f'<linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1">'
         f'<stop offset="0" stop-color="{DOT}" stop-opacity="0"/>'
-        f'<stop offset=".5" stop-color="{DOT}" stop-opacity=".30"/>'
+        f'<stop offset=".5" stop-color="{DOT}" stop-opacity=".22"/>'
         f'<stop offset="1" stop-color="{DOT}" stop-opacity="0"/></linearGradient>'
-        f'<radialGradient id="vg" cx="0.5" cy="0.45" r="0.62">'
-        f'<stop offset="0" stop-color="#0d1c26"/><stop offset="1" stop-color="{BG}"/></radialGradient>'
-        f'<pattern id="scanlines" width="1" height="3" patternUnits="userSpaceOnUse">'
-        f'<rect width="1" height="3" fill="none"/><rect width="1" height="1" fill="#000" opacity="0.22"/></pattern>'
-        f'<clipPath id="frame"><rect x="{PAD}" y="{PAD}" width="{GW}" height="{GH}" rx="10"/></clipPath>'
+        f'<clipPath id="frame"><rect x="{PAD}" y="{PAD}" width="{GW}" height="{GH}"/></clipPath>'
         '</defs>')
 
-    # backdrop
-    s.append(f'<rect width="{W}" height="{H}" rx="16" fill="{BG}"/>')
-    s.append(f'<rect x="{PAD}" y="{PAD}" width="{GW}" height="{GH}" rx="10" fill="url(#vg)"/>')
+    if not transparent:
+        s.append(f'<rect width="{W}" height="{H}" fill="#000000"/>')
 
-    # faint alignment grid
-    grid = [f'<g stroke="{GRID_INK}" stroke-width="0.5" opacity="0.25">']
-    for i in range(0, COLS + 1, 7):
-        grid.append(f'<line x1="{PAD + i * CELL}" y1="{PAD}" x2="{PAD + i * CELL}" y2="{PAD + GH}"/>')
-    for i in range(0, ROWS + 1, 7):
-        grid.append(f'<line x1="{PAD}" y1="{PAD + i * CELL}" x2="{PAD + GW}" y2="{PAD + i * CELL}"/>')
-    grid.append('</g>')
-    s.append(f'<g clip-path="url(#frame)">{"".join(grid)}</g>')
-
-    # the dots (holographic flicker on the whole group)
-    s.append(f'<g class="holo" clip-path="url(#frame)">')
+    # the dots, with holographic flicker + sweeping light band
+    s.append('<g class="holo">')
     s.append(f'<g fill="{DOT}">{"".join(dots)}</g>')
-    # sweeping light band
-    s.append(f'<rect class="scan" x="{PAD}" y="{PAD}" width="{GW}" height="30" fill="url(#scanG)"/>')
-    # scanline overlay
-    s.append(f'<rect x="{PAD}" y="{PAD}" width="{GW}" height="{GH}" fill="url(#scanlines)"/>')
+    s.append(f'<g clip-path="url(#frame)"><rect class="scan" x="{PAD}" y="{PAD}" '
+             f'width="{GW}" height="24" fill="url(#scanG)"/></g>')
     s.append('</g>')
 
-    # retro corner brackets
-    L = 16
+    # subtle retro corner brackets
+    L = 14
     for bx, by, dx, dy in [(PAD, PAD, 1, 1), (PAD + GW, PAD, -1, 1),
                            (PAD, PAD + GH, 1, -1), (PAD + GW, PAD + GH, -1, -1)]:
         s.append(f'<path d="M{bx} {by + L * dy}V{by}H{bx + L * dx}" fill="none" '
-                 f'stroke="{DOT}" stroke-width="2" opacity="0.85"/>')
-
-    # projector base
-    s.append(f'<ellipse class="shim" cx="{W/2}" cy="{PAD + GH + 8}" rx="120" ry="9" '
-             f'fill="none" stroke="{DOT}" stroke-dasharray="3 5" opacity="0.5"/>')
+                 f'stroke="{DOT}" stroke-width="1.5" opacity="0.55"/>')
 
     s.append('</svg>')
     return "".join(s)
 
 
-def preview_png(vals, out):
+def preview_png(vals, out, transparent=False):
     from PIL import Image, ImageDraw
-    scale = 10
-    img = Image.new("RGB", (W * scale // CELL * CELL // CELL, 0))  # placeholder
-    img = Image.new("RGB", (COLS * scale, ROWS * scale), (7, 10, 15))
+    scale = 6
+    mode = "RGBA" if transparent else "RGB"
+    bgfill = (0, 0, 0, 0) if transparent else (0, 0, 0)
+    img = Image.new(mode, (COLS * scale, ROWS * scale), bgfill)
     d = ImageDraw.Draw(img)
-    maxr = scale * 0.52
+    maxr = scale * 0.56
     for (c, r), v in vals.items():
-        rad = maxr * (0.35 + 0.65 * v)
+        rad = maxr * (0.28 + 0.72 * v)
         cx, cy = c * scale + scale / 2, r * scale + scale / 2
-        g = int(232 * (0.45 + 0.55 * v))
-        d.ellipse([cx - rad, cy - rad, cx + rad, cy + rad], fill=(g, g + 6 if g + 6 < 256 else 255, g + 10 if g + 10 < 256 else 255))
+        g = int(234 * (0.3 + 0.7 * v))
+        col = (g, min(255, g + 8), min(255, g + 16))
+        d.ellipse([cx - rad, cy - rad, cx + rad, cy + rad], fill=col)
     img.save(out)
 
 
@@ -193,10 +165,11 @@ if __name__ == "__main__":
     ap.add_argument("--photo")
     ap.add_argument("-o", "--out", default="assets/portrait.svg")
     ap.add_argument("--preview")
+    ap.add_argument("--transparent", action="store_true")
     a = ap.parse_args()
     vals = values_from_photo(a.photo) if a.photo else values_silhouette()
-    open(a.out, "w").write(build(vals))
+    open(a.out, "w").write(build(vals, a.transparent))
     print("wrote", a.out)
     if a.preview:
-        preview_png(vals, a.preview)
+        preview_png(vals, a.preview, a.transparent)
         print("wrote", a.preview)
