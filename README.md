@@ -1,117 +1,123 @@
 <div align="center">
-  <h1>👋 Hi, I'm Abhishek Sinha</h1>
-  <h3>Full Stack & Mobile Developer | Building Scalable SaaS & Real-Time Systems</h3>
+
+<img src="./assets/hologram.svg" alt="Pixel hologram avatar" width="288" />
+
+# Abhishek Sinha
+
+**Full Stack & Mobile Developer** · building scalable SaaS and real-time systems
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-sinha-0897aa23b)
+[![Portfolio](https://img.shields.io/badge/Portfolio-161B22?style=for-the-badge&logo=netlify&logoColor=2DD4BF)](https://abhisheksinha.netlify.app/)
+[![Email](https://img.shields.io/badge/Email-161B22?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abhisheksinha20009k@gmail.com)
+
 </div>
+
+<br />
+
+```ts
+const abhishek = {
+  role: "Full Stack & Mobile Developer",
+  mobile: ["React Native", "iOS", "Android"],
+  web: ["React", "TypeScript", "Node.js"],
+  building: "mycodeyatra.com", // multi-author blogging platform
+  openTo: ["open source", "system design", "full-time roles"],
+};
+```
+
+I own products end-to-end: React Native and web front ends, Node.js microservices, deployment and production monitoring.
+
+---
+
+## Activity
 
 <p align="center">
-  <img src="./assets/space-shooter.gif" alt="GitHub Contribution Game" width="80%" />
+  <img src="./assets/activity-wave.svg" alt="Animated contribution wave" width="100%" />
 </p>
 
-<div align="center">
-  <a href="https://www.linkedin.com/in/abhishek-sinha-0897aa23b"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://abhisheksinha.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-252F3F?style=for-the-badge&logo=Planet&logoColor=white" alt="Portfolio" /></a>
-  <a href="mailto:abhisheksinha20009k@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-</div>
+<p align="center">
+  <a href="https://github.com/abhisheksinha20p">
+    <img src="https://streak-stats.demolab.com/?user=abhisheksinha20p&theme=github-dark-blue&hide_border=true&background=0D1117&ring=2DD4BF&fire=8B7CF6&currStreakLabel=2DD4BF" alt="GitHub streak" />
+  </a>
+</p>
 
 ---
 
-## 🚀 About Me
+## Experience
 
-I’m a **Full Stack & Mobile Developer** with professional experience building **production-grade SaaS platforms**, **real-time systems**, and **scalable backend architectures**. I enjoy owning products end-to-end — from architecture design and backend engineering to deployment and production monitoring.
+**Full Stack & Mobile Developer (Freelance)** · Tech Signific · *Oct 2025 – Present*
+- Architected multi-tenant SaaS platforms with React Native mobile apps and React admin dashboards.
+- Designed Node.js microservices with Kafka event-driven communication, Redis caching, Socket.IO and an NGINX gateway.
+- Set up DevOps with Docker, GitHub Actions, AWS EC2, Prometheus and Grafana.
 
-- 🌱 **Currently building:** A multi-author blogging platform at **mycodeyatra.com**, deploying and scaling via **Vercel** and **MongoDB Atlas**.
-- ⚙️ **Specialties:** Microservices, DevOps pipelines, and high-performance real-time backends.
-- 🤝 **Open to:** Collaborating on open-source projects, system design challenges, and full-time engineering roles.
-
----
-
-## 🧠 Tech Stack
-
-### 💻 Languages
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white)
-
-### 🎨 Frontend
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white) ![Framer](https://img.shields.io/badge/Framer-black?style=flat&logo=framer&logoColor=blue)
-
-### ⚙️ Backend & Architecture
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=flat&logo=express&logoColor=%2361DAFB) ![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=flat&logo=apachekafka) ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=flat&logo=socket.io&badgeColor=010101) 
-
-### 🗄 Databases & Cloud
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=flat&logo=redis&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=flat&logo=nginx&logoColor=white)
+**Full Stack Developer Intern** · Tech Signific · *Jan 2025 – Jul 2025*
+- Built REST APIs with Node.js and Express and responsive React interfaces.
+- Improved backend performance and reliability in Agile sprints using Git and Jira.
 
 ---
 
-## 📈 GitHub Stats
+## Projects
 
-[![GitHub Streak](https://streak-stats.demolab.com/?user=abhisheksinha20p&theme=transparent&hide_border=true&title_color=61DAFB&text_color=ffffff)](https://github.com/abhisheksinha20p)
-
----
-
-## 💼 Experience
-
-### **Full Stack & Mobile Developer (Freelance)**
-**Tech Signific** | *Oct 2025 – Present*
-*   Architected and developed large-scale multi-tenant SaaS platforms, including React Native mobile apps and React admin dashboards.
-*   Designed Node.js microservices with Kafka-based event-driven communication.
-*   Implemented Redis caching, Socket.IO real-time systems, and an NGINX API gateway.
-*   Established comprehensive DevOps workflows using Docker, GitHub Actions, AWS EC2, Prometheus, and Grafana.
-
-### **Full Stack Developer Intern**
-**Tech Signific** | *Jan 2025 – Jul 2025*
-*   Built scalable REST APIs with Node.js and Express while developing responsive frontend interfaces using React.
-*   Improved backend performance and production reliability through Agile sprint cycles using Git & Jira.
+| | Project | Highlights | Stack |
+|---|---|---|---|
+| 📱 Mobile | **Restaurant Management SaaS** | Real-time order tracking, event-driven microservices, API gateway with rate limiting | React Native, Node.js, Kafka, Redis, Docker, AWS |
+| 📱 Mobile | **School Operations SaaS** | Real-time transport tracking, automated attendance, RBAC access control | React Native, Node.js, Kafka, MongoDB, Docker |
+| 🌐 Web | **ClientFlow** | Stripe payments, JWT auth, role-based dashboards | React, Node.js, Stripe, Docker, AWS |
+| 🌐 Web | **Vera** | Task management with glassmorphism UI and optimized frontend performance | React, TypeScript, Express, MongoDB |
 
 ---
 
-## 🧩 Featured Projects
+## Stack
 
 <table>
   <tr>
-    <td width="50%">
-      <h3>🍽 Restaurant Management SaaS</h3>
-      <p>Multi-tenant SaaS platform for restaurant operations management.</p>
-      <p><strong>Tech:</strong> React Native, Node.js, Kafka, Redis, Docker, AWS</p>
-      <ul>
-        <li>Real-time order tracking with Socket.IO</li>
-        <li>Event-driven microservices architecture</li>
-        <li>API gateway with rate limiting</li>
-      </ul>
-    </td>
-    <td width="50%">
-      <h3>🏫 School Operations SaaS</h3>
-      <p>Comprehensive school management platform supporting multiple user roles.</p>
-      <p><strong>Tech:</strong> React Native, Node.js, Kafka, MongoDB, Docker</p>
-      <ul>
-        <li>Real-time transport tracking</li>
-        <li>Automated attendance pipelines</li>
-        <li>RBAC-secured access control</li>
-      </ul>
+    <td><b>Languages</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/JavaScript-161B22?style=flat-square&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+      <img src="https://img.shields.io/badge/TypeScript-161B22?style=flat-square&logo=typescript&logoColor=3178C6" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB" alt="Python" />
+      <img src="https://img.shields.io/badge/HTML5-161B22?style=flat-square&logo=html5&logoColor=E34F26" alt="HTML5" />
+      <img src="https://img.shields.io/badge/CSS3-161B22?style=flat-square&logo=css3&logoColor=1572B6" alt="CSS3" />
     </td>
   </tr>
   <tr>
-    <td width="50%">
-      <h3>💼 ClientFlow</h3>
-      <p>Full-stack client management platform with secure workflows.</p>
-      <p><strong>Tech:</strong> React, Node.js, Stripe, Docker, AWS</p>
-      <ul>
-        <li>Stripe payment integration</li>
-        <li>JWT authentication & Role-based dashboards</li>
-      </ul>
+    <td><b>Mobile</b></td>
+    <td><img src="https://img.shields.io/badge/React_Native-161B22?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native" /></td>
+  </tr>
+  <tr>
+    <td><b>Web</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/React-161B22?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+      <img src="https://img.shields.io/badge/Tailwind-161B22?style=flat-square&logo=tailwindcss&logoColor=38BDF8" alt="Tailwind CSS" />
+      <img src="https://img.shields.io/badge/Vite-161B22?style=flat-square&logo=vite&logoColor=646CFF" alt="Vite" />
+      <img src="https://img.shields.io/badge/Framer-161B22?style=flat-square&logo=framer&logoColor=white" alt="Framer" />
     </td>
-    <td width="50%">
-      <h3>✨ Vera</h3>
-      <p>Modern task management application focused on smooth UX.</p>
-      <p><strong>Tech:</strong> React, TypeScript, Express, MongoDB</p>
-      <ul>
-        <li>Glassmorphism design</li>
-        <li>Optimized frontend performance</li>
-      </ul>
+  </tr>
+  <tr>
+    <td><b>Backend</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Node.js-161B22?style=flat-square&logo=nodedotjs&logoColor=6DA55F" alt="Node.js" />
+      <img src="https://img.shields.io/badge/Express-161B22?style=flat-square&logo=express&logoColor=white" alt="Express" />
+      <img src="https://img.shields.io/badge/Kafka-161B22?style=flat-square&logo=apachekafka&logoColor=white" alt="Kafka" />
+      <img src="https://img.shields.io/badge/Socket.io-161B22?style=flat-square&logo=socketdotio&logoColor=white" alt="Socket.io" />
+    </td>
+  </tr>
+  <tr>
+    <td><b>Data & Cloud</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/MongoDB-161B22?style=flat-square&logo=mongodb&logoColor=47A248" alt="MongoDB" />
+      <img src="https://img.shields.io/badge/Postgres-161B22?style=flat-square&logo=postgresql&logoColor=4169E1" alt="Postgres" />
+      <img src="https://img.shields.io/badge/Redis-161B22?style=flat-square&logo=redis&logoColor=DC382D" alt="Redis" />
+      <img src="https://img.shields.io/badge/AWS-161B22?style=flat-square&logo=amazonaws&logoColor=FF9900" alt="AWS" />
+      <img src="https://img.shields.io/badge/Docker-161B22?style=flat-square&logo=docker&logoColor=2496ED" alt="Docker" />
+      <img src="https://img.shields.io/badge/Nginx-161B22?style=flat-square&logo=nginx&logoColor=009639" alt="Nginx" />
     </td>
   </tr>
 </table>
 
 ---
 
-## ⭐ Support
+<div align="center">
 
-If you like my work or find my projects useful, feel free to **star** my repositories and connect with me!
+If you like my work or find my projects useful, star a repository and say hello.
+
+</div>
