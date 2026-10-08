@@ -1,0 +1,13 @@
+{
+  "title": "Skill Radar",
+  "_comment": "SELF-RATED, 0-100. These values are PLACEHOLDERS inferred from the stack in your old README, not a measurement. Edit them; the workflow redraws the chart.",
+  "axes": [
+    { "label": "React Native", "value": 85 },
+    { "label": "React", "value": 88 },
+    { "label": "Node.js", "value": 90 },
+    { "label": "TypeScript", "value": 80 },
+    { "label": "System design", "value": 78 },
+    { "label": "DevOps", "value": 75 },
+    { "label": "Databases", "value": 80 }
+  ]
+}
