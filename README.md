@@ -1,4 +1,4 @@
-# ⚡ Abhishek Sinha
+#  Abhishek Sinha
 
 ## Frontline Deployment Engineer · Full-Stack & Mobile Engineer · Production Systems & AI
 
